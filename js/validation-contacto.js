@@ -48,3 +48,12 @@ const validationForm = (event) => {
 
 formRegister.addEventListener('submit',validationForm);
 
+// Obtén el elemento del textarea por su ID
+const textarea = document.getElementById('message');
+
+// Agrega un controlador de eventos al evento "focus"
+textarea.addEventListener('focus', function() {
+  // Selecciona automáticamente todo el texto en el textarea
+  textarea.select();
+});
+

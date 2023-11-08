@@ -67,7 +67,7 @@ body{
 }
 
 .form-wrapper {
-    opacity: 0.5;
+    /* opacity: 0.5; */
     display: flex;
     position: absolute;
     /* justify-content: center; */
@@ -133,6 +133,11 @@ form .form-control {
     padding: 16px 20px 0;
 }
 
+/* Cambiar el color del placeholder */
+input::placeholder {
+    color: #FFF; /* Color rojo para el placeholder */
+  }
+
 .form-control label {
     position: absolute;
     left: 20px;
@@ -140,9 +145,22 @@ form .form-control {
     transform: translateY(-50%);
     font-size: 1rem;
     pointer-events: none;
-    color: #8c8c8c;
-    transition: all 0.1s ease;
+    color: #fff;
+    /* transition: all 0.1s ease; */
 }
+
+input:focus ~ label,
+input:valid ~ label{
+    top:-25%;
+    /* padding-bottom: 50px; */
+} 
+/* input:focus ~ label,
+input:valid ~ label{
+    top:-5px;
+    padding-bottom: 50px;
+} */
+
+
 
 #birthdate{
     padding:16px 20px 0px;
