@@ -7,7 +7,8 @@
     margin: 0;
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
 }
@@ -190,10 +191,10 @@ ul.menu {
 
 .service-item {
     flex: 1;
-    padding: 50px 10px;
+    padding: 50px 0px;
     border: lightcyan solid 1px;
     text-align: center;
-    margin: 180px 50px;
+    margin: 10px 10px;
     transition: all 1s;
     display: flex;
     flex-flow: column;
@@ -254,7 +255,7 @@ ul.menu {
     box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    width: 80%;
+    width: 100%;
     height: auto;
 }
 
@@ -325,7 +326,8 @@ ul.menu {
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    padding: 150px;
+    padding: 50px;
+    margin: 50px;
 }
 
 .about-img {
@@ -408,12 +410,25 @@ ul.menu {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 670px;
+    height: auto;
     position: relative;
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.links {
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 33.33%;
+    /* Cambio: Establecer tamaño de ancho para los divs */
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .footer::before {
@@ -427,14 +442,13 @@ ul.menu {
     right: 0;
 }
 
-.footer .links {
-    position: relative;
-    color: #fff;
-    flex: 1;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+@media screen and (max-width: 768px) {
+
+    /* Cambio: Media query para pantallas más pequeñas */
+    .links {
+        flex: 0 0 100%;
+        /* Cambio: Permitir que los divs se ajusten al ancho completo */
+    }
 }
 
 .links ul {
@@ -458,6 +472,7 @@ ul.menu {
     color: #FFA801;
 }
 
+
 /*==========================Responsive=============================*/
 /* MEDIA QUERY PANTALLAS MEDIANAS (TABLETS) */
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -465,15 +480,15 @@ ul.menu {
         display: none;
     }
 
-     .nav-bar {
+    .nav-bar {
         /* display: flex;
         flex-wrap: wrap; */
         /* white-space: nowrap; */
-        display:grid;
+        display: grid;
         font-size: 1em;
         justify-content: center;
         /* background: black; */
-        color:#fff;
+        color: #fff;
         height: 300px;
     }
 
@@ -491,6 +506,7 @@ ul.menu {
         background: #000;
         width: 700px;
     }
+
     .logos {
         grid-column: span 12;
         padding-right: 45px;
@@ -499,7 +515,7 @@ ul.menu {
 
     .form-wrapper {
         padding: 20px;
-    } 
+    }
 
     .form-wrapper {
         display: flex;
@@ -509,10 +525,10 @@ ul.menu {
         /* margin-right: 120px; */
     }
 
-    .parte1{
+    .parte1 {
         padding-top: 150px;
     }
-    
+
     .form-wrapper form {
         margin: 25px 0 65px;
     }
@@ -529,17 +545,18 @@ ul.menu {
     .form-wrapper form {
         margin: 25px 0 40px;
     }
+
     .button {
         text-align: center;
         padding-right: 20px;
     }
 
-    }
+}
 
 
 /* MEDIA QUERY PANTALLAS GRANDES (PC)
 @media screen and (min-width: 992px) {
     /* Estilos para pantallas grandes */
-    /*body {
+/*body {
         font-size: 16px;
     }/*
