@@ -19,7 +19,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
+    box-shadow: inset 0 0 5px #808080;
     border-radius: 10px;
 }
 
@@ -39,7 +39,7 @@ html {
     width: 100%;
     height: 90px;
     background-color: #fff;
-    box-shadow: 3px 3px 10px lightslategray;
+    box-shadow: 3px 3px 10px #778899;
     align-items: center;
     justify-content: center;
     position: sticky;
@@ -53,6 +53,16 @@ html {
     padding: 20px;
     margin-left: 50px;
     font-family: Satisfy;
+}
+
+	
+.fa-brands {
+    color: #181717;
+    padding: 1rem;
+}
+.fa-brands:hover,
+.fa-brands:visited {
+    color:#fde02f;
 }
 
 ul.menu {
@@ -76,9 +86,10 @@ ul.menu {
 }
 
 .menu li a:hover {
-    color: midnightblue;
-    text-decoration: underline;
+    color: #fde02f;
+    text-decoration: none;
 }
+/*=============================Fin NavBar=============================*/
 
 /*=============================Banner=============================*/
 .banner {
@@ -192,7 +203,7 @@ ul.menu {
 .service-item {
     flex: 1;
     padding: 50px 0px;
-    border: lightcyan solid 1px;
+    border: #e0ffff solid 1px;
     text-align: center;
     margin: 10px 10px;
     transition: all 1s;
@@ -203,7 +214,7 @@ ul.menu {
 }
 
 .service-item:hover {
-    box-shadow: 3px 3px 20px lightsteelblue;
+    box-shadow: 3px 3px 20px #b0c4de;
 }
 
 .service-item h2 {
@@ -251,7 +262,7 @@ ul.menu {
 }
 
 .card {
-    border: 1px solid lightgray;
+    border: 1px solid #d3d3d3;
     box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -443,6 +454,16 @@ ul.menu {
 }
 
 @media screen and (max-width: 768px) {
+
+    .nav-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 300px;
+        /* background: black; */
+        color: #fff;
+        display: flex;
+        font-size: 1em;
+    }
 
     /* Cambio: Media query para pantallas más pequeñas */
     .links {
